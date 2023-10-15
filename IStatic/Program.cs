@@ -75,6 +75,7 @@ namespace IStatic
             gr2.AddStudent(new Student2("LAla", "Shafii"));
             gr2.AddStudent(new Student2("Leyla", "Nasirli"));
 
+
             Group.ShowAllGroups();
 
 
