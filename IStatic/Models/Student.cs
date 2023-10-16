@@ -10,12 +10,11 @@ namespace IStatic.Models
 {
     internal class Student:ICodeAcademy
     {
-        public static int _count=1;
+        public static int _count=0;
 
         public Student(string name, string surname)
         {
-            Id = _count;
-            _count++;
+            Id = ++_count;
             Name = name.Substring(0,1).ToUpper()+name.Substring(1).ToLower();
             Surname = surname.Substring(0, 1).ToUpper() + surname.Substring(1).ToLower();
             CodeEmail = GenerateEmail();
