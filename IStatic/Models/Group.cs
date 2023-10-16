@@ -29,13 +29,16 @@ namespace IStatic.Models
             Console.WriteLine($@"
 Id:{GroupId}
 Name:{GroupName}
-Count of Students:{_groupCount}");
+Count of Students:{Students.Length}");
         }
 
         public Student2 GetStudent(int id)
         {
-            if (id < 0 || id >= _groupCount) return null;
-            else return Students[id];
+            foreach (Student2 student in Students)
+            {
+                if (id == student.Id) return student;
+            }
+            return null;
         }
 
 
